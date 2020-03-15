@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Product;
-//use App\UserAccess\UserAccessFacade;
+use App\UserAccess\UserAccessFacade;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
     public function index(){
-        //\App\UserAccess\UserAccess::getAccess();exit;
+        \UserAccess::getAccess();exit;
         //return redirect()->route('addproduct_view');
         $productdetails = Product::join('categories', 'categories.id', '=', 'products.category')
             ->select('products.productname','products.productid','categories.*')

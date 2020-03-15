@@ -1,3 +1,4 @@
+<?php //UserAccess::getAccess();exit; ?>
 @extends('layout/layout')
 @section('title','Products')
 @section('content')
