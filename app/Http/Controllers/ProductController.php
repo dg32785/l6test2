@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class ProductController extends Controller
 {
     public function index(){
-        \UserAccess::getAccess();exit;
+        //\UserAccess::getAccess();exit;
         //return redirect()->route('addproduct_view');
         $productdetails = Product::join('categories', 'categories.id', '=', 'products.category')
             ->select('products.productname','products.productid','categories.*')
